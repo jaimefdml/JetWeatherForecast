@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.jaimefdml.android.jetweatherforecast"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.jaimefdml.android.jetweatherforecast"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -29,11 +29,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -57,6 +57,7 @@ dependencies {
     val retrofitVersion = "2.9.0"
     val okHttpVersion = "4.10.0"
     val roomVersion = "2.5.2"
+    val navVersion = "2.7.6"
 
     //Hilt
     implementation("com.google.dagger:hilt-android:2.44")
@@ -88,6 +89,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.0")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
+    implementation("androidx.navigation:navigation-compose:$navVersion")
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
